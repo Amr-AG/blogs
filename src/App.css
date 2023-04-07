@@ -2,37 +2,194 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+}
+.navbar h1 {
+  color: #fa7272;
+}
+.navbar .links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.navbar .active {
+  background-color: #fa7272;
+  color: #fff !important;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.home {
+  width: 100%;
+}
+.blog-preview {
+  padding: 10px 25px;
+  display: flex;
+  margin: 10px auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.blog-preview:hover {
+  transition: 0.5s;
+  box-shadow: -1px 3px 5px 0px #a3a3a3;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blogs-list h2 {
+  width: 100%;
+  text-align: start;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.blogs-list .blog-preview h2 {
+  color: #fa7272;
+}
+.blogs-list .blog-preview button {
+  padding: 8px 10px;
+  border: solid 1px #ffffff;
+  font-size: 14px;
+  border-radius: 8px;
+  box-shadow: -2px 2px 6px 0px #c1c1c1;
+  cursor: pointer;
+}
+.blogs-list .blog-preview button:hover {
+  transition: 0.5s;
+  box-shadow: -2px 2px 6px 0px #565656;
+}
+.add-blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+  align-content: center;
+  flex-direction: column;
+}
+.add-blog-container h2 {
+  color: #fa7272;
+}
+.add-blog {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 10px;
+}
+.add-blog label {
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-blog input,
+textarea {
+  width: 350px;
+  padding: 8px 15px;
+  border: solid 1px #c6c6c6;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.add-blog select {
+  width: 200px;
+  padding: 8px 15px;
+  border: solid 1px #ffffff;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: -2px 2px 6px 0px #c1c1c1;
+  margin-bottom: 30px;
+}
+.add-blog input,
+textarea,
+select:focus {
+  outline: none;
+  border: solid 1px #ffffff;
+  box-shadow: -2px 2px 6px 0px #c1c1c1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-blog button {
+  width: 150px;
+  padding: 10px 20px;
+  border: solid 1px #ffffff;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: -2px 2px 6px 0px #c1c1c1;
+  cursor: pointer;
+  margin: 10px auto 40px auto;
+}
+
+/* Blog Details css */
+.blog-details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.blog-details-container button {
+  width: 150px;
+  padding: 10px 20px;
+  border: solid 1px #ff0000;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: -2px 2px 6px 0px #c1c1c1;
+  cursor: pointer;
+  margin: 10px auto 40px auto;
+}
+
+.msg {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #dddddd;
+  padding: 40px 40px;
+  border-radius: 10px;
+  gap: 25px;
+  position: absolute;
+}
+.msgContent {
+  flex: 100%;
+}
+.msg span:nth-child(2),
+span:nth-child(3) {
+  padding: 10px 20px;
+  border: solid 1px #ffffff;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: -2px 2px 6px 0px #c1c1c1;
+  cursor: pointer;
+}
+.msg span:nth-child(2):hover {
+  transition: 1s;
+  background: #ff4d4d;
+  color: #fff;
+}
+.msg span:nth-child(3):hover {
+  transition: 1s;
+  background: #3e3e3e;
+  color: #fff;
 }
